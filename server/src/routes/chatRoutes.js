@@ -9,6 +9,6 @@ router.post('/create', authMiddleware,createChat)
 router.get('/getChats',authMiddleware,getMyChats)
 router.get('/getChat', authMiddleware, getChatById)
 router.post('/joinChat',authMiddleware, joinChat)
-router.get('/getMessages', getChatMessages)
+router.get('/getMessages', authMiddleware,getChatMessages)
 
 export default router
